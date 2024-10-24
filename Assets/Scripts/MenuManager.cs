@@ -19,7 +19,7 @@ public class MenuManager : MonoBehaviour
         Application.Quit();
     }
 
-    public void GOQuitButton()
+    public void Restart()
     {
         Debug.Log("pressed");
         SceneManager.LoadScene("MainMenu");
