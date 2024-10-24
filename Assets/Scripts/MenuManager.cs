@@ -7,8 +7,9 @@ public class MenuManager : MonoBehaviour
 {
     public void PlayButton()
     {
+        // Continues to Game scene
         Debug.Log("Pressed");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("GameScene");
     }
 
     //Ends game
@@ -21,9 +22,10 @@ public class MenuManager : MonoBehaviour
     public void GOQuitButton()
     {
         Debug.Log("pressed");
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadScene("MainMenu");
     }
 
+    // Reset to beginning of Game scene
     public void ResetSceneButton()
     {
         SceneManager.LoadScene("GameScene");
