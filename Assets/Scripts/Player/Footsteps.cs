@@ -5,15 +5,16 @@ using UnityEngine;
 public class Footsteps : MonoBehaviour
 {
     public GameObject player;
-   /* void Update()
+    void Update()
     {
-        if (player.GetComponent<PlayerMovement>().isWalking)
+        PlayerMovement playerMovement = player.GetComponent<PlayerMovement>();
+        if (playerMovement.isWalking())
         {
-            Footstep();
+            FootStep();
         }
         else
         {
-            StopFootstep();
+            StopFootStep();
         }
     }
 
@@ -26,5 +27,5 @@ public class Footsteps : MonoBehaviour
     {
         player.SetActive(false);
     }
-   */
+   
 }
