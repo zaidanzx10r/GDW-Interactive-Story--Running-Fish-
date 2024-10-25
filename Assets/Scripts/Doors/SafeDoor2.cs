@@ -9,4 +9,5 @@ public class SafeDoor2 : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene3");
     }
+
 }
