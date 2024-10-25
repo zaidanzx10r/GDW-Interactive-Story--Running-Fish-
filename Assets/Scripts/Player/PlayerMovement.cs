@@ -1,45 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    private Rigidbody rb;
+    public float movementSpeed = 5f;
 
-    private void Start()
+    private CharacterController controller;  
+    private Vector2 WASDInput;  
+    private void Awake()
     {
-        rb = GetComponent<Rigidbody>();
+        controller = GetComponent<CharacterController>();
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        WASDInput = context.ReadValue<Vector2>();
     }
 
     private void Update()
     {
         Movement();
-
-        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded())
-        {
-            Jump();
-        }
     }
 
     private void Movement()
     {
-        float moveX = Input.GetAxis("Horizontal");
-        float moveZ = Input.GetAxis("Vertical");
+        Vector3 forward = transform.forward;
+        Vector3 right = transform.right;
 
-        Vector3 move = new Vector3(moveX, 0f, moveZ) * moveSpeed * Time.deltaTime;
+        forward.y = 0f;
+        right.y = 0f;
 
-        rb.MovePosition(rb.position + move);
-    }
+        Vector3 direction = (forward * WASDInput.y) + (right * WASDInput.x);
 
-    private void Jump()
-    {
-        rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics.Raycast(transform.position, Vector3.down, 1.1f);
+        controller.Move(direction * movementSpeed * Time.deltaTime);
     }
 }

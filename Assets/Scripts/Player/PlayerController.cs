@@ -40,7 +40,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""94813fa6-2f01-44b1-80c5-e2e586fa826b"",
-                    ""expectedControlType"": ""Vector3"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -70,7 +70,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                 {
                     ""name"": ""WASD"",
                     ""id"": ""391d15bc-3a12-4d86-acc2-8b6d8741d09c"",
-                    ""path"": ""3DVector"",
+                    ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -101,7 +101,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""forward"",
+                    ""name"": ""up"",
                     ""id"": ""6feb54a8-bb00-45ec-85b0-95a690f096b8"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
@@ -112,7 +112,7 @@ public partial class @PlayerController: IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""backward"",
+                    ""name"": ""down"",
                     ""id"": ""d75ec797-fd38-4a70-9e0a-b0675c63d7dd"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
