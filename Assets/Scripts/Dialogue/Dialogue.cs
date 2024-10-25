@@ -8,8 +8,8 @@ public class Dialogue : MonoBehaviour
         public TextMeshProUGUI promptText;
     public string intro = "You awake from you slumber and find yourself in a forested ravine, with no memories of how you got there you panic. after a bit you settle down and notice in front of you a door...";
     public string Dia1 = "looking around further you notice more doors, hoping to exit the ravine, you pick a door and walk through it.";
-    public string Dia2 = "";
-    public string Dia3 = "";
+    public string Dia2 = "Walking through the door you find your self in the same revine. You notice keen differences, the Door and trees are moved. hoping that you don't have to go through more doors you march on.";
+    public string Dia3 = "After hours of walking in the forest, changing each door you enter, you find yourself going insane and incressingly more dehydrated.";
     public string Dia4 = "";
     public string Dia5 = "";
     public string Dia6 = "";
