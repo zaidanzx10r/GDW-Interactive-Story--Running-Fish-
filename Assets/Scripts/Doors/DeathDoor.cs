@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Door2 : MonoBehaviour
+public class DeathDoor : MonoBehaviour
 {
     public DoorManager Door;
-    public string secondDoor = "You Died";
 
-    public void SecondDoor()
+    public void deathDoor()
     {
-        Door.promptText.text = secondDoor;
-        Door.promptText.gameObject.SetActive(true);
+        SceneManager.LoadScene("MainMenu");
     }
 }

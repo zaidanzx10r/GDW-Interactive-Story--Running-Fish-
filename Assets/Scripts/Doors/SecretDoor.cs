@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Door3 : MonoBehaviour
+public class SecretDoor : MonoBehaviour
 {
     public DoorManager Door;
-    public string thirdDoor = "Retreat";
 
-    public void ThirdDoor()
+
+    public void secretDoor()
     {
-        Door.promptText.text = thirdDoor;
-        Door.promptText.gameObject.SetActive(true);
+        SceneManager.LoadScene("MainMenu");
     }
+    
 }

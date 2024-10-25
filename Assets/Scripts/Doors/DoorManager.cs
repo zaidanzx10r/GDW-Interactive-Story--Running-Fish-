@@ -8,8 +8,8 @@ public class DoorManager : MonoBehaviour
     public TextMeshProUGUI promptText;
     private SafeDoor1 safeDoor1;
     private SafeDoor2 safeDoor2;
-    private Door2 door2;
-    private Door3 door3;
+    private SecretDoor secretDoor;
+    private DeathDoor deathDoor;
 
     // Start is called before the first frame update
     void Start()
@@ -29,14 +29,14 @@ public class DoorManager : MonoBehaviour
             safeDoor2.safeDoor2();
 
         }
-        if (other.CompareTag("Door2"))
+        if (other.CompareTag("secretDoor"))
         {
-            door2.SecondDoor();
+            secretDoor.secretDoor();
         }
 
-        if (other.CompareTag("Door3"))
+        if (other.CompareTag("deathDoor"))
         {
-            door3.ThirdDoor();
+            deathDoor.deathDoor();
         }
     }
 }
