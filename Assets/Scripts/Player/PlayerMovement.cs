@@ -7,7 +7,6 @@ public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 5f;
     public float Gravity = -9.81f;
-    private float verticalSpeed;
 
     private CharacterController controller;  
     private Vector2 WASDInput;  
@@ -38,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 direction = (forward * WASDInput.y) + (right * WASDInput.x);
 
-        verticalSpeed += Gravity * Time.deltaTime;
-        controller.Move((direction * movementSpeed + Vector3.up * verticalSpeed) * Time.deltaTime);
+    
+        controller.Move((direction * movementSpeed + Vector3.up * Gravity) * Time.deltaTime);
     }
     public bool isWalking()
     {
