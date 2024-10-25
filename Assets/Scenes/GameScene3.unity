@@ -4549,32 +4549,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 124859469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e042a896861914642b7b13a2567153ec, type: 3}
+  m_Script: {fileID: 11500000, guid: ff857887e19781b4981a4880f4bdd2f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   promptText: {fileID: 1462638241}
-  intro: You awake from you slumber and find yourself in a forested ravine, with
-    no memories of how you got there you panic. after a bit you settle down and notice
-    in front of you a door...
-  Dia1: looking around further you notice more doors, hoping to exit the ravine,
-    you pick a door and walk through it.
-  Dia2: Walking through the door you find your self in the same revine. You notice
-    keen differences, the Door and trees are moved. hoping that you don't have to
-    go through more doors you march on.
-  Dia3: After hours of walking in the forest, changing each door you enter, you find
-    yourself going insane and incressingly more dehydrated.
-  Dia4: 
-  Dia5: 
-  Dia6: 
-  Dia7: 
-  Dia8: 
-  Dia9: 
-  secretDoor: Upon entering a hidden door, your vision goes dark. Awakening in your
-    room, you realise that it was just a nightmare. A nightmare so realistic you
-    felt pain in it...
+  Dia3: After hours of walking in the forest. The Forest changing each door you enter,
+    you find yourself going insane and incressingly more dehydrated.
   Death: Upon entering the door, it shuts behind you and locks. Looking further into
     the room, you witness yourself murder another version of yourself. He slowly
     turns around and looks at you while smiling. Then your vision slowly fades.
+  Escape: Entering the last door, your mind broken, on the virge of death You Escaped......            
+    or did you!?!?!
 --- !u!1001 &127680354
 PrefabInstance:
   m_ObjectHideFlags: 0

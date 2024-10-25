@@ -13543,16 +13543,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f10a84a4caff8464bba0b7710a9ad96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptText: {fileID: 0}
+  promptText: {fileID: 364442733}
   Dia2: Walking through the door you find your self in the same revine. You notice
     keen differences, the Door and trees are moved. hoping that you don't have to
     go through more doors you march on.
-  secretDoor: Upon entering a hidden door, your vision goes dark. Awakening in your
-    room, you realise that it was just a nightmare. A nightmare so realistic you
-    felt pain in it...
-  Death: Upon entering the door, it shuts behind you and locks. Looking further into
-    the room, you witness yourself murder another version of yourself. He slowly
-    turns around and looks at you while smiling. Then your vision slowly fades.
 --- !u!1001 &1144506944
 PrefabInstance:
   m_ObjectHideFlags: 0
