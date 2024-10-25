@@ -8,7 +8,6 @@ public class DialogueScene2 : MonoBehaviour
         public TextMeshProUGUI promptText;
 
     public string Dia2 = "Walking through the door you find your self in the same revine. You notice keen differences, the Door and trees are moved. hoping that you don't have to go through more doors you march on.";
-    public string secretDoor = "Upon entering a hidden door, your vision goes dark. Awakening in your room, you realise that it was just a nightmare. A nightmare so realistic you felt pain in it...";
     public string Death = "Upon entering the door, it shuts behind you and locks. Looking further into the room, you witness yourself murder another version of yourself. He slowly turns around and looks at you while smiling. Then your vision slowly fades.";
 
 
@@ -25,19 +24,4 @@ public class DialogueScene2 : MonoBehaviour
         }
     
     }
-    private void OnTriggerEnter(Collider collision)
-    {
-        if (collision.gameObject.CompareTag("deathDoor"))
-        {
-            promptText.text = Death;
-            promptText.gameObject.SetActive(true);
-
-        }
-        else if (collision.gameObject.CompareTag("secretDoor"))
-        {
-            promptText.text = secretDoor;
-            promptText.gameObject.SetActive(true);
-        }
-    }
-    
 }
