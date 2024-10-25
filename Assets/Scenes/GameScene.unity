@@ -465,6 +465,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Secret Door
       objectReference: {fileID: 0}
+    - target: {fileID: 2463755077847424330, guid: 21f4ca241d6c41e449e3f49f50e52097, type: 3}
+      propertyPath: m_TagString
+      value: secretDoor
+      objectReference: {fileID: 0}
     - target: {fileID: 6509696599788643407, guid: 21f4ca241d6c41e449e3f49f50e52097, type: 3}
       propertyPath: m_LocalPosition.x
       value: -36.58
@@ -883,6 +887,7 @@ GameObject:
   - component: {fileID: 233922859}
   - component: {fileID: 233922860}
   - component: {fileID: 233922861}
+  - component: {fileID: 233922862}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1135,6 +1140,20 @@ MonoBehaviour:
   Death: Upon entering the door, it shuts behind you and locks. Looking further into
     the room, you witness yourself murder another version of yourself. He slowly
     turns around and looks at you while smiling. Then your vision goes blank.
+--- !u!114 &233922862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233922850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef485e9106e213a4ea661ce125b53aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  promptText: {fileID: 0}
+  delay: 5
 --- !u!1001 &338976377
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3230,7 +3249,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4180019264647384568, guid: e8a1d3dd803ec974085321aac03603cc, type: 3}
       propertyPath: m_TagString
-      value: Death
+      value: deathDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7409296267001148761, guid: e8a1d3dd803ec974085321aac03603cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7061,7 +7080,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4180019264647384568, guid: e8a1d3dd803ec974085321aac03603cc, type: 3}
       propertyPath: m_TagString
-      value: Death
+      value: deathDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7409296267001148761, guid: e8a1d3dd803ec974085321aac03603cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8583,6 +8602,10 @@ PrefabInstance:
     - target: {fileID: 2463755077847424330, guid: 21f4ca241d6c41e449e3f49f50e52097, type: 3}
       propertyPath: m_Name
       value: Actual Door
+      objectReference: {fileID: 0}
+    - target: {fileID: 2463755077847424330, guid: 21f4ca241d6c41e449e3f49f50e52097, type: 3}
+      propertyPath: m_TagString
+      value: safeDoor1
       objectReference: {fileID: 0}
     - target: {fileID: 6509696599788643407, guid: 21f4ca241d6c41e449e3f49f50e52097, type: 3}
       propertyPath: m_LocalPosition.x

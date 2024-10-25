@@ -5,10 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class DeathDoor : MonoBehaviour
 {
-    public DoorManager Door;
-
     public void deathDoor()
     {
         SceneManager.LoadScene("MainMenu");
     }
+
 }
