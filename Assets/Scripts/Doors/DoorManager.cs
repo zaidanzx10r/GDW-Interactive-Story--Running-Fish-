@@ -6,7 +6,8 @@ using TMPro;
 public class DoorManager : MonoBehaviour
 {
     public TextMeshProUGUI promptText;
-    private Door1 door1;
+    private SafeDoor1 safeDoor1;
+    private SafeDoor2 safeDoor2;
     private Door2 door2;
     private Door3 door3;
 
@@ -18,9 +19,14 @@ public class DoorManager : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Door1"))
+        if (other.CompareTag("safeDoor1"))
         {
-            door1.FirstDoor();
+            safeDoor1.safeDoor1();
+
+        }
+        if (other.CompareTag("safeDoor2"))
+        {
+            safeDoor2.safeDoor2();
 
         }
         if (other.CompareTag("Door2"))
