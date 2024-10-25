@@ -14,7 +14,7 @@ public class DialogueScene3 : MonoBehaviour
 
     void Start()
     {
-        promptText.text = "Dia3";
+        promptText.text = Dia3;
     }
 
     private void OnTriggerExit(Collider collision)

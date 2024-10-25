@@ -11,7 +11,7 @@ public class Dialogue : MonoBehaviour
 
     void Start()
     {
-        promptText.text = "intro";
+        promptText.text = intro;
     }
 
     private void OnTriggerExit(Collider collision)

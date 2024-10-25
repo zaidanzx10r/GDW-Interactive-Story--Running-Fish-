@@ -12,7 +12,7 @@ public class DialogueScene2 : MonoBehaviour
 
     void Start()
     {
-        promptText.text = "Dia2";
+        promptText.text = Dia2;
     }
 
     private void OnTriggerExit(Collider collision)
