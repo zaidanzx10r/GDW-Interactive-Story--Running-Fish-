@@ -23,8 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        Movement();
-        
+            Movement();
     }
 
     private void Movement()

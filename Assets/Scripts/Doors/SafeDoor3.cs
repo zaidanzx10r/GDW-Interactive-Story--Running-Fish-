@@ -1,25 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class DeathDoor : MonoBehaviour
+public class SafeDoor3 : MonoBehaviour
 {
-    public Behaviour deathScreen;
+    public Behaviour winScreen;
     [SerializeField]
     private float delay = 1f;
 
-     void Start()
+    void Start()
     {
-        deathScreen.enabled = false;
+        winScreen.enabled = false;
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            deathScreen.enabled = true;
+            winScreen.enabled = true;
             StartCoroutine(ActionDelay(other));
         }
     }
@@ -32,6 +31,6 @@ public class DeathDoor : MonoBehaviour
     private IEnumerator ActionDelay(Collider player)
     {
         yield return new WaitForSeconds(delay);
-        ReloadCurrentScene();
+        SceneManager.LoadScene("MainMenu");
     }
 }
