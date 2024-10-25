@@ -93,7 +93,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6509696599788643407}
   m_Layer: 0
-  m_Name: SafeDoor_01
+  m_Name: Safe Door
   m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
