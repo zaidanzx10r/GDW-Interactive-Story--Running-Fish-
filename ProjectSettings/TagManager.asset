@@ -12,6 +12,8 @@ TagManager:
   - deathDoor
   - Dia1Exit
   - intro
+  - Death
+  - Dia3Exit
   layers:
   - Default
   - TransparentFX

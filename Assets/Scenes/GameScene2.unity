@@ -5924,6 +5924,59 @@ CapsuleCollider:
   m_Height: 8
   m_Direction: 1
   m_Center: {x: 0, y: 3.5, z: 0}
+--- !u!1 &412533860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 412533862}
+  - component: {fileID: 412533861}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Dia1Exit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &412533861
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412533860}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &412533862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 412533860}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 5.14, z: 7.57}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &433467278
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13255,9 +13308,9 @@ GameObject:
   - component: {fileID: 1137758974}
   - component: {fileID: 1137758973}
   - component: {fileID: 1137758972}
+  - component: {fileID: 1137758978}
   - component: {fileID: 1137758971}
   - component: {fileID: 1137758970}
-  - component: {fileID: 1137758978}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -13487,26 +13540,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1137758969}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e042a896861914642b7b13a2567153ec, type: 3}
+  m_Script: {fileID: 11500000, guid: f10a84a4caff8464bba0b7710a9ad96c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  promptText: {fileID: 364442733}
-  intro: You awake from you slumber and find yourself in a forested ravine, with
-    no memories of how you got there you panic. after a bit you settle down and notice
-    in front of you a door...
-  Dia1: looking around further you notice more doors, hoping to exit the ravine,
-    you pick a door and walk through it.
+  promptText: {fileID: 0}
   Dia2: Walking through the door you find your self in the same revine. You notice
     keen differences, the Door and trees are moved. hoping that you don't have to
     go through more doors you march on.
-  Dia3: After hours of walking in the forest, changing each door you enter, you find
-    yourself going insane and incressingly more dehydrated.
-  Dia4: 
-  Dia5: 
-  Dia6: 
-  Dia7: 
-  Dia8: 
-  Dia9: 
   secretDoor: Upon entering a hidden door, your vision goes dark. Awakening in your
     room, you realise that it was just a nightmare. A nightmare so realistic you
     felt pain in it...
@@ -26146,3 +26186,4 @@ SceneRoots:
   - {fileID: 982937904}
   - {fileID: 2045605700}
   - {fileID: 387048783}
+  - {fileID: 412533862}
