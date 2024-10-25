@@ -10,6 +10,8 @@ TagManager:
   - safeDoor3
   - secretDoor
   - deathDoor
+  - Dia1Exit
+  - intro
   layers:
   - Default
   - TransparentFX
