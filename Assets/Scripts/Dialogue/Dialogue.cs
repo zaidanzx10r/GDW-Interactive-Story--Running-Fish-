@@ -38,7 +38,7 @@ public class Dialogue : MonoBehaviour
     }
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.CompareTag("Death"))
+        if (collision.gameObject.CompareTag("deathDoor"))
         {
             promptText.text = Death;
             promptText.gameObject.SetActive(true);
