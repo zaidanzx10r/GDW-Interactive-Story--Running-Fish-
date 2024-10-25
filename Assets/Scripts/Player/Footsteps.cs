@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Footsteps : MonoBehaviour
 {
-    public GameObject Audio;
+    public AudioSource Audio;
+    public PlayerMovement playerMovement;
     void Update()
     {
-        PlayerMovement playerMovement = Audio.GetComponent<PlayerMovement>();
-        if (playerMovement.isWalking() => )
+        float isWalking = playerMovement.IsWalking();
+        if (isWalking >= 1 )
         {
             FootStep();
         }
-        else if (!playerMovement.isWalking())
+        else if (isWalking == 0)
         {
             StopFootStep();
         }
@@ -20,12 +21,15 @@ public class Footsteps : MonoBehaviour
 
     public void FootStep()
     {
-        Audio.SetActive(true);
+        if (!Audio.isPlaying)
+        {
+        Audio.Play();
+        }
     }
 
     public void StopFootStep()
     {
-        Audio.SetActive(false);
+        Audio.Stop();
     }
    
 }

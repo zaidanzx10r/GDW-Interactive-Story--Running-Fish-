@@ -40,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
     
         controller.Move((direction * movementSpeed + Vector3.up * Gravity) * Time.deltaTime);
     }
-    public bool isWalking()
+    public float IsWalking()
     {
-        return WASDInput.magnitude > 0;
+        return WASDInput.magnitude;
     }
 }
