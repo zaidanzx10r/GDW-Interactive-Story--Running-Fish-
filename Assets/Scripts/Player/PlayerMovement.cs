@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed = 5f;
+    public float movementSpeedMultiplier = 2f;
     public float Gravity = -9.81f;
 
     private CharacterController controller;  
     private Vector2 WASDInput;  
+    private bool isSprinting = false;
 
     private void Awake()
     {
@@ -19,6 +22,10 @@ public class PlayerMovement : MonoBehaviour
     public void OnMove(InputAction.CallbackContext context)
     {
         WASDInput = context.ReadValue<Vector2>();
+    }
+    public void OnSprint(InputAction.CallbackContext context)
+    {
+        isSprinting = context.ReadValueAsButton();
     }
 
     private void Update()
@@ -36,8 +43,9 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 direction = (forward * WASDInput.y) + (right * WASDInput.x);
 
+        float currentSpeed = isSprinting ? movementSpeed * movementSpeedMultiplier : movementSpeed;
     
-        controller.Move((direction * movementSpeed + Vector3.up * Gravity) * Time.deltaTime);
+        controller.Move((direction * currentSpeed + Vector3.up * Gravity) * Time.deltaTime);
     }
     public float IsWalking()
     {
