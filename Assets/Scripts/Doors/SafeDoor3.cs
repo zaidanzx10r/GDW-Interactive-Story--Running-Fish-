@@ -32,5 +32,7 @@ public class SafeDoor3 : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("MainMenu");
+        Cursor.lockState = CursorLockMode.None; 
+        Cursor.visible = true;
     }
 }
