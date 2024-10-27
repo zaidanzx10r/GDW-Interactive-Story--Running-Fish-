@@ -23,6 +23,7 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("pressed");
         SceneManager.LoadScene("MainMenu");
+
     }
 
     // Reset to beginning of Game scene
@@ -30,5 +31,6 @@ public class MenuManager : MonoBehaviour
     {
         SceneManager.LoadScene("GameScene");
     }
+
 
 }
