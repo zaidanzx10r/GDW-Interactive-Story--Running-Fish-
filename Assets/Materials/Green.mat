@@ -62,13 +62,13 @@ Material:
     m_Ints: []
     m_Floats:
     - _BumpScale: 1
-    - _Cutoff: 0.5
+    - _Cutoff: 0.275
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
     - _GlossMapScale: 1
-    - _Glossiness: 0.5
+    - _Glossiness: 0.234
     - _GlossyReflections: 1
-    - _Metallic: 0
+    - _Metallic: 0.103
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.02
