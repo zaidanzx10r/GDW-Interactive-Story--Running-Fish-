@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a758e5fb6fd036f40b0e018244b4d227
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - awesomeShader: {fileID: 4800000, guid: 488fb9590d6d46747a2f3b0535dd9978, type: 3}
+  - m_renderMaterial: {fileID: 2100000, guid: a584fc73bf4a3464aa323aee37367c3a, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
