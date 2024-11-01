@@ -231,8 +231,8 @@
     ],
     "m_VertexContext": {
         "m_Position": {
-            "x": 683.0000610351563,
-            "y": -225.00001525878907
+            "x": 480.9999084472656,
+            "y": -200.99996948242188
         },
         "m_Blocks": [
             {
@@ -248,8 +248,8 @@
     },
     "m_FragmentContext": {
         "m_Position": {
-            "x": 683.0000610351563,
-            "y": -24.999980926513673
+            "x": 480.9999084472656,
+            "y": -0.9999593496322632
         },
         "m_Blocks": [
             {
@@ -490,10 +490,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -558.0,
-            "y": 386.9999694824219,
-            "width": 208.0,
-            "height": 302.0000305175781
+            "x": -259.0000305175781,
+            "y": 262.9999694824219,
+            "width": 128.00001525878907,
+            "height": 118.00003051757813
         }
     },
     "m_Slots": [
@@ -511,7 +511,7 @@
         "scalar product"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -546,10 +546,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -801.0,
-            "y": 487.99993896484377,
-            "width": 208.0,
-            "height": 314.99993896484377
+            "x": -480.0000305175781,
+            "y": 316.0,
+            "width": 206.0,
+            "height": 131.0
         }
     },
     "m_Slots": [
@@ -561,7 +561,7 @@
         "eye direction"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 2,
     "m_CustomColors": {
@@ -644,7 +644,7 @@
         "x"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -703,10 +703,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -17.000089645385743,
-            "y": 177.99990844726563,
-            "width": 208.00003051757813,
-            "height": 326.00006103515627
+            "x": 95.99999237060547,
+            "y": 45.99999237060547,
+            "width": 130.0,
+            "height": 142.00003051757813
         }
     },
     "m_Slots": [
@@ -729,7 +729,7 @@
         "linear interpolate"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1152,10 +1152,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -454.9999694824219,
-            "y": -145.0000457763672,
-            "width": 108.99996948242188,
-            "height": 33.99995422363281
+            "x": -132.00001525878907,
+            "y": -182.00001525878907,
+            "width": 108.99998474121094,
+            "height": 34.0
         }
     },
     "m_Slots": [
@@ -1230,10 +1230,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -137.0000457763672,
-            "y": 218.99996948242188,
-            "width": 119.99995422363281,
-            "height": 33.99995422363281
+            "x": -46.000030517578128,
+            "y": 80.99999237060547,
+            "width": 120.0000228881836,
+            "height": 34.00000762939453
         }
     },
     "m_Slots": [
@@ -1348,10 +1348,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -801.0,
-            "y": 152.99998474121095,
-            "width": 208.0,
-            "height": 314.99993896484377
+            "x": -482.0000305175781,
+            "y": 182.0,
+            "width": 206.0,
+            "height": 131.0
         }
     },
     "m_Slots": [
@@ -1363,7 +1363,7 @@
         "surface direction"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 2,
     "m_CustomColors": {
@@ -1704,10 +1704,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -343.0000305175781,
-            "y": 272.99993896484377,
-            "width": 208.0000457763672,
-            "height": 302.00006103515627
+            "x": -58.0,
+            "y": 240.99996948242188,
+            "width": 144.99996948242188,
+            "height": 118.00003051757813
         }
     },
     "m_Slots": [
@@ -1723,7 +1723,7 @@
     ],
     "synonyms": [],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1840,10 +1840,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -344.00006103515627,
-            "y": -183.00001525878907,
-            "width": 208.0000457763672,
-            "height": 434.9999084472656
+            "x": 51.999996185302737,
+            "y": -225.00001525878907,
+            "width": 183.0,
+            "height": 251.00001525878907
         }
     },
     "m_Slots": [
@@ -1876,7 +1876,7 @@
         "tex2d"
     ],
     "m_Precision": 0,
-    "m_PreviewExpanded": true,
+    "m_PreviewExpanded": false,
     "m_DismissedVersion": 0,
     "m_PreviewMode": 0,
     "m_CustomColors": {
@@ -1947,10 +1947,10 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -122.00007629394531,
-            "y": 244.9999237060547,
-            "width": 104.00007629394531,
-            "height": 33.99995422363281
+            "x": -34.000064849853519,
+            "y": 119.00000762939453,
+            "width": 104.00004577636719,
+            "height": 33.999961853027347
         }
     },
     "m_Slots": [
