@@ -9,7 +9,7 @@ Another student, Zaidan Van Graan, contributed to the movement script by adding 
 I decided to play around with different ways to implement color grading. I had little success using the LUT tables and the code provided during lectures. I had modified the code to allow for the LUT 'contribution' slider to be accessible directly in the camera's inspector rather than having to change it through the shader itself. When implementing the color corrections I found them too strong as they overpowered the scene even with lower intensity so I tried changing the lighting mode in the projet settings from gamma to linear making things look less plastic. I also tried using the Post Processing Stack to create a Post Process Layer to overlay on the camera. This allowed for easier implementation of a vignette which helped darken the corners of the screen and give the game a more claustrophobic feel. I was also able to more effectively adjust the color grading filter by doing so directly in the inspector itself, saving time and resources from needing to pull a LUT into photoshop. This way also allowed me to see the changes made in real time in the context of the game which made for a more efficient workflow. With this I was able to desaturate the scene to give it an eerier, more bleached out and 'dead' look to the trees and grass. Without the color correction the greens and browns popped very brightly which contrasted too much with the dark and eerie nature of the scene's atmosphere. 
 
 # Emissive Textures - Nicholas
-
+For the emissive textures I used 3Dcoat to paint the word "Death" on a plane and gave it emissive properties through that software. It doesn't translate as well into Unity where I learned the importance of being able to use the shaders to achieve that in Unity itself. Doing so allowed me to create the effect I wanted by having "Death" be visible from far away even while not illuminated
 
 # Toon Shaders - Joseph
 For the metallic shader, first we set the base color to a grey (#c0c0c0) using a color variable, then connect a float named smoothness
@@ -22,6 +22,6 @@ Both of those are then multiplied together and fed into the unlit fragment base 
 # Metallic - Joseph
 For the metallic shader, first we set the base color to a grey (#c0c0c0) using a color variable, then connect a float named smoothness
 To adjust the smoothness. Ambient occlusion is set to 1 to make the light affect it more directly (shaded where the light doesn't touch it and vice versa). A float called Metallic allows us to change how metallic and reflective it is. The emissions gives it a glow effect where the light shines.
- # Movement & Look Scripts - Joseph
- # Textures & models - Nicholas
+
+
  
