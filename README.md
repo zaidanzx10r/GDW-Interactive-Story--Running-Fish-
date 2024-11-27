@@ -29,6 +29,7 @@ The following are the explanations required for each new implementation along wi
 
 # Improvement
 The first big improvement we made was to remake the model for the flashlight. The original model had too much additional, unnecessary, geometry which caused some issues with the normals. Entire faces of the prop would not appear. 
+
 ![image](https://github.com/user-attachments/assets/107ca32a-7a04-4b72-88ad-1ae008f7eb07)
 
 The image above is the original model for the flashlight.
