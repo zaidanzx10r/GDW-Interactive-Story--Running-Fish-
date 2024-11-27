@@ -69,9 +69,25 @@ A new addition to the scene was a small creek. We created a water shader that wo
 ![image](https://github.com/user-attachments/assets/6899d0f6-64ae-4f22-87d2-cced2907c45c)
 
 An example of the glass texture being used to create a glass door. 
+the glass shader was made in shader graph by first setting the surface type to transparent, the blending mode to Alpha, and the Render Face to both, then we added a fresnal effect to give the glass a shine, we took the fresnal effect and multiplied it by a float value to change the density of the effect, then we add the base color to the multiplied result and plug that into the emissions.
+we also connect float values to the smoothness, metallic and alpha fragment section to modify the properties of the glass in unity for if we want to have a more frosted effect on the glass or not
 
 
 # Particles
 
 ![image](https://github.com/user-attachments/assets/2d85558a-dacd-4b31-93c4-5da5df03c3cc)
 
+
+for the fireflies we made 3 floats and a color float, those floats are an intensity float, a flickerSpeed float and an alpha float. now for the effect itself we first used a fresnal effect with the intensity float connect to its power, multiplied by the BaseColor, and then further multiplied by a sine time remaped to produces variables between 0 and 1. that remap is then multiplied by the flickerSpeed float. now we took those to results bot the Time remap and fresnal effect and multiplied them and further multiplied them with a sample texture 2D of a black circle to produce a circular shape. all of that is connected to the base color fragment and the alpha float is connected to the alpha fragment.
+for the graph setting we changed the surface type to transparent, Render face to both, blending mode to additive.
+now this material was used in combination with unity's Particles system to produce the FireFlies.
+for the particles system settings we used the emission, shape, vekicuty over lifetime, size over lifetime, noise, and redenderer.
+for emission we set the rate at which the particles spawn to 10 and added a burst to randomly add a bunch more fireflies.
+for the shape we set it to a sphere to emit the particles in all directions
+for the size over lifetime we set the size to a curve that is bell shaped so that the particles start smaller grow big in the lifetime then shrink back down before the end of there lifetime.
+for the noise we set the strength to 1, the frequency to 0.5 and the scroll speed to a curve that is S shaped.
+
+Another Particle System was used to add Leafs that are falling and flying about.
+for the material its just a hand drawn life with a transparent background.
+this material was then connected to the rendering of a particles system. for this Particle system the settings that where used are emmision, shape, noise, rotation over lifetime and redenderer.
+for the emission we set the start lifetime to 10, the start size to 0.1 and its gravity modifier to 0.1. for the shape we used the box shape, for the rotation over lifetime we set the angular velocity to 45 to give it the effect that its being blown in the wind. for the noise it strength is set to 0.5 along with its frequency.
