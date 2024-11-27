@@ -73,3 +73,5 @@ An example of the glass texture being used to create a glass door.
 
 # Particles
 
+![image](https://github.com/user-attachments/assets/2d85558a-dacd-4b31-93c4-5da5df03c3cc)
+
