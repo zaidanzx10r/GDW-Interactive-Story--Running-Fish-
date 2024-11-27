@@ -48,10 +48,27 @@ The original door texture was very flat, lacking a normal map. It was entirely h
 
 We made a similar change to the trees. Which, once having flat, solid colours as textures, are now complete with a more interesting texture that falls in line with the ambience of the game. It makes it easier to color grade as it isn't already made of bright colours. They feature normal maps as well. 
 
+![image](https://github.com/user-attachments/assets/c8935bab-e6cb-4830-929f-2ed9672b6753)
+![image](https://github.com/user-attachments/assets/a6957ebd-a959-44f5-84ac-6bdc9c3f9241)
+
+
 # Texture
 As previously mentioned, texturing was applied to the trees and doors. Textures were applied to every physical object in the game, with the player and the new flashlight being the only exceptions. This includes the water texture which was created using Substance Designer. I wanted to play around with the different resources that allow us to create our own textures. With 3DCoat I was afforded more precision to paint on textures directly onto the models which allowed me greater control over the look as I was able to see it applied immediately. Substance Designer allowed me to get more detailed with each attribute of the texture itself and make the normal mapping myself using the nodes. With these tools I was able to create multiple different textures in different ways and learned the value of each tool in the control it allows me. 
 The blades of grass retain their original textures from Assignment 1. As do the large mountains and the grass plane the player walks on. Much of the texturing had already been completed in the first assignment, thus over 70% of the objects feature appropriate textures.
 
 # Visual Effects
+# Waves
 A new addition to the scene was a small creek. We created a water shader that would not only apply waves but also featured a scrolling texture. This was a combination of two different shaders we went over in class. Combining the two allowed for a more dynamic creek as the texture moved with the waves themselves, making the illusion of downstream movement appear more convincingly. The shader was also made to be fully tileable, which allowed us to creat a creek that spans the length of the scene without needlessly stretching out the textures. The shader uses a sine function applied to each vertex of the plane to create the waves, this is why visually the waves actually look like a sine function.
+
+![image](https://github.com/user-attachments/assets/43d6185c-0424-4816-9f74-8daa3fba1651)
+
+
+# Glass
+
+![image](https://github.com/user-attachments/assets/6899d0f6-64ae-4f22-87d2-cced2907c45c)
+
+An example of the glass texture being used to create a glass door. 
+
+
+# Particles
 
