@@ -35,7 +35,7 @@ Shader "Custom/DiffuseAmbientShader" {
             {
                 v2f o;
                 o.pos = UnityObjectToClipPos(v.vertex);
-                o.normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal); // Transform normal to world space
+                o.normal = mul((float3x3)UNITY_MATRIX_IT_MV, v.normal); 
                 o.color = _MainColor; // Set main color
                 return o;
             }
@@ -43,7 +43,7 @@ Shader "Custom/DiffuseAmbientShader" {
             fixed4 frag(v2f i) : SV_Target 
             {
                 // Calculate diffuse lighting
-                float3 lightDir = normalize(float3(0, 0, 1)); // Example light direction
+                float3 lightDir = normalize(float3(1, 1, 1)); 
                 float diff = max(dot(i.normal, lightDir), 0);
                 
                 // Combine diffuse and ambient lighting
