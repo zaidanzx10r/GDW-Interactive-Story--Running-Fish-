@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class DeathDoor : MonoBehaviour
 {
+    public DialogueScene3 dialogue;
     public Behaviour deathScreen;
     [SerializeField]
     private float delay = 1f;
@@ -19,7 +21,7 @@ public class DeathDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            deathScreen.enabled = true;
+            //dialogue.Death.text = true;
             StartCoroutine(ActionDelay(other));
         }
     }
@@ -32,6 +34,9 @@ public class DeathDoor : MonoBehaviour
     private IEnumerator ActionDelay(Collider player)
     {
         yield return new WaitForSeconds(delay);
+
+        deathScreen.enabled = true;
+
         ReloadCurrentScene();
     }
 }

@@ -10834,7 +10834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   winScreen: {fileID: 646591436}
-  delay: 0.5
+  delay: 3
 --- !u!1001 &623428744
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34501,7 +34501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathScreen: {fileID: 522342667}
-  delay: 0.5
+  delay: 3
 --- !u!65 &1765811845
 BoxCollider:
   m_ObjectHideFlags: 0

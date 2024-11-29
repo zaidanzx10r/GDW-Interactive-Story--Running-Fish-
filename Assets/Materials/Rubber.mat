@@ -38,6 +38,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
+    - _BUILTIN_QueueControl: 0
     - _BumpStrength: 182
     - _Smoothness: 0.717
     m_Colors: []

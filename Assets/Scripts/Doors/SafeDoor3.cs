@@ -18,7 +18,6 @@ public class SafeDoor3 : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            winScreen.enabled = true;
             StartCoroutine(ActionDelay(other));
         }
     }
@@ -31,7 +30,11 @@ public class SafeDoor3 : MonoBehaviour
     private IEnumerator ActionDelay(Collider player)
     {
         yield return new WaitForSeconds(delay);
+
+        winScreen.enabled = true;
+
         SceneManager.LoadScene("MainMenu");
+
         Cursor.lockState = CursorLockMode.None; 
         Cursor.visible = true;
     }
