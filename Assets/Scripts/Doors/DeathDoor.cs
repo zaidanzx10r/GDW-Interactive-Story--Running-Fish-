@@ -8,6 +8,7 @@ using TMPro;
 public class DeathDoor : MonoBehaviour
 {
     public DialogueScene3 dialogue;
+
     public Behaviour deathScreen;
     [SerializeField]
     private float delay = 1f;
