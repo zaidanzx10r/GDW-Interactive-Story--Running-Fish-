@@ -10,11 +10,11 @@ For the emissive textures I used 3Dcoat to paint the word "Death" on a plane and
 For the metallic shader, first we set the base color to a grey (#c0c0c0) using a color variable, then connect a float named smoothness
 To adjust the smoothness. Ambient occlusion is set to 1 to make the light affect it more directly (shaded where the light doesn't touch it and vice versa). A float called Metallic allows us to change how metallic and reflective it is. The emissions gives it a glow effect where the light shines.
 
-# Void Shading - Joseph
+# Void Shading 
 For the void shade we have a gradient noise to create a randomized pattern going into a remap to keep its values small in the calculations. And a Simple noise to produces a sine wave of flashing to the gradient noise by multiplying sin time by a float value of 0.2 to control its speed.
 Both of those are then multiplied together and fed into the unlit fragment base color.
 
-# Metallic - Joseph
+# Metallic 
 For the metallic shader, first we set the base color to a grey (#c0c0c0) using a color variable, then connect a float named smoothness
 To adjust the smoothness. Ambient occlusion is set to 1 to make the light affect it more directly (shaded where the light doesn't touch it and vice versa). A float called Metallic allows us to change how metallic and reflective it is. The emissions gives it a glow effect where the light shines.
 
