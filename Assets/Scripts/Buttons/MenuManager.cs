@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     {
         // Continues to Game scene
         Debug.Log("Pressed");
-        SceneManager.LoadScene("GameScene3");
+        SceneManager.LoadScene("GameScene");
     }
 
     //Ends game
@@ -17,6 +17,11 @@ public class MenuManager : MonoBehaviour
     {
         Debug.Log("pressed");
         Application.Quit();
+    }
+
+    public void CreditsButton()
+    {
+        SceneManager.LoadScene("Credits");
     }
 
     public void Restart()
