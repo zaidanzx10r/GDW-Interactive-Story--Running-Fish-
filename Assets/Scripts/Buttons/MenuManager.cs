@@ -34,7 +34,7 @@ public class MenuManager : MonoBehaviour
     // Reset to beginning of Game scene
     public void ResetSceneButton()
     {
-        SceneManager.LoadScene("GameScene3");
+        SceneManager.LoadScene("GameScene");
     }
 
 
