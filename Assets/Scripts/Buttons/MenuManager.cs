@@ -24,6 +24,11 @@ public class MenuManager : MonoBehaviour
         SceneManager.LoadScene("Credits");
     }
 
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void Restart()
     {
         Debug.Log("pressed");
