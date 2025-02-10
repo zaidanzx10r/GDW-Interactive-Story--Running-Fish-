@@ -42758,7 +42758,6 @@ GameObject:
   - component: {fileID: 1856908271}
   - component: {fileID: 1856908272}
   - component: {fileID: 1856908274}
-  - component: {fileID: 1856908275}
   - component: {fileID: 1856908276}
   - component: {fileID: 1856908277}
   - component: {fileID: 1856908278}
@@ -42859,21 +42858,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sensitivity: 50
   playerBody: {fileID: 124859476}
---- !u!114 &1856908275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1856908270}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86a6f0e7db9e2344a9231b5ca1507102, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lutShader: {fileID: 4800000, guid: a5b55664ed3417f418c1bded34c3f099, type: 3}
-  lutTexture: {fileID: 2800000, guid: 5bc0c7498aece87479b22394d8912dd2, type: 3}
-  contribution: 0.093
 --- !u!114 &1856908276
 MonoBehaviour:
   m_ObjectHideFlags: 0
