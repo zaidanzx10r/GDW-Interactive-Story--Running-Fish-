@@ -9,7 +9,7 @@ public class MenuManager : MonoBehaviour
     {
         // Continues to Game scene
         Debug.Log("Pressed");
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("LevelTest");
     }
 
     //Ends game
@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
     // Reset to beginning of Game scene
     public void ResetSceneButton()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("LevelTest");
     }
 
 
