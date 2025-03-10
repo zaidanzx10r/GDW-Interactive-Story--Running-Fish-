@@ -2008,6 +2008,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7249064636197333349, guid: e066dd32effe92a47b4eee9706ca82f9, type: 3}
   m_PrefabInstance: {fileID: 67469317}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &359554299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ba0b47b70134934a92fe1f58755e00f, type: 3}
+  m_PrefabInstance: {fileID: 520019665}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &359554301
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359554299}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 6.7105465
+  m_Height: 15
+  m_Direction: 1
+  m_Center: {x: -5, y: 5, z: 3}
+--- !u!54 &359554303
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 359554299}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!4 &375878344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7249064636197333349, guid: e066dd32effe92a47b4eee9706ca82f9, type: 3}
@@ -2840,10 +2895,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Low Poly Deer Textured
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2ba0b47b70134934a92fe1f58755e00f, type: 3}
+      propertyPath: m_TagString
+      value: Monster
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ba0b47b70134934a92fe1f58755e00f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359554301}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2ba0b47b70134934a92fe1f58755e00f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 359554303}
   m_SourcePrefab: {fileID: 100100000, guid: 2ba0b47b70134934a92fe1f58755e00f, type: 3}
 --- !u!1 &522342664
 GameObject:
@@ -8360,6 +8425,8 @@ GameObject:
   - component: {fileID: 1856908274}
   - component: {fileID: 1856908276}
   - component: {fileID: 1856908277}
+  - component: {fileID: 1856908278}
+  - component: {fileID: 1856908279}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8614,6 +8681,36 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1856908278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856908270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 593bf5ada88727b45aeedfa0775c882e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashlight: {fileID: 1620340663}
+  batteryLife: 100
+  batteryDrainSpeed: 1
+  batteryDrain: 25
+--- !u!114 &1856908279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856908270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3cf9f94ff786e447a6b0f93517a9ee6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashRange: {fileID: 3814741624203657214, guid: 996159e987bebe443bb9c58d026e8a8f, type: 3}
+  flashDistance: 5
 --- !u!1001 &1860568202
 PrefabInstance:
   m_ObjectHideFlags: 0

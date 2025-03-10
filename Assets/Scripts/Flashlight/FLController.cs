@@ -7,6 +7,8 @@ public class FLController : MonoBehaviour
     public Light flashlight;
     public float batteryLife = 100f;
     public float batteryDrainSpeed = 1f;
+    public float batteryDrain = 25f;
+
     private bool isOn = false;
 
     void Start()
