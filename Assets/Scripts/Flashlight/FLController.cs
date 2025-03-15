@@ -11,9 +11,19 @@ public class FLController : MonoBehaviour
 
     private bool isOn = false;
 
+
+    private Transform playerPosition;
+    public GameObject flashRange;
+    public float flashDistance = 5f;
+
     void Start()
     {
         flashlight.enabled = isOn;
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            playerPosition = player.transform;
+        }
     }
     void Update()
     {
@@ -32,6 +42,26 @@ public class FLController : MonoBehaviour
                 flashlight.enabled=false;
                 isOn = false;
             }
+        }
+
+        if(playerPosition != null)
+        {
+            Vector3 playerPos = playerPosition.position;
+        }
+
+        Flash();
+    }
+
+    public void Flash()
+    {
+        if(Input.GetKeyDown(KeyCode.Q) && playerPosition != null && batteryLife >= batteryDrain) 
+        {
+            Vector3 spawnPosition = playerPosition.position + playerPosition.forward * flashDistance;
+            GameObject flashEffect = Instantiate(flashRange, spawnPosition, playerPosition.rotation);
+
+            Destroy(flashEffect, 0.5f);
+
+
         }
     }
     public void RechargeBattery(float amount)
