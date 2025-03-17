@@ -22,6 +22,10 @@ public class FollowPlayer : MonoBehaviour
     {
         NavMeshAgent agent = GetComponent<NavMeshAgent>();
         agent.destination = player.position;
+
+        Vector3 direction = player.position - transform.position;
+        direction.y = 0;
+        transform.rotation = Quaternion.LookRotation(direction);
     }
 
     private void OnCollisionEnter(Collision collision)
