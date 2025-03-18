@@ -12,6 +12,10 @@ public class GlobalTimer : MonoBehaviour
     public TextMeshProUGUI scoreValue;
     public TextMeshProUGUI finalScoreValue;
 
+    [SerializeField]
+    private DeathCon deathController;
+    private bool isDead = false;
+
     private void Update()
     {
         Timer();
@@ -31,9 +35,17 @@ public class GlobalTimer : MonoBehaviour
             scoreValue.text = formattedTime;
             finalScoreValue.text = formattedTime;
         }
-        else
+        else if (!isDead)
         {
-            // make the player die
+            isDead = true;
+            ActivateDeathScreen();
         }
     }
+
+    void ActivateDeathScreen()
+    {
+        StartCoroutine(deathController.DeathDelay(null));
+    }
+
+
 }

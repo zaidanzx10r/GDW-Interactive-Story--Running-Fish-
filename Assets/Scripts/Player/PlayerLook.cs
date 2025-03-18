@@ -19,6 +19,11 @@ public class PlayerLook : MonoBehaviour
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        if (!Cursor.visible)
+        {
+            Debug.Log("Cursor hidden");
+        }
     }
 
     private void Update()
