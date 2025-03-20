@@ -12,7 +12,7 @@ public class FlashlightAbility : MonoBehaviour
 
     public GameObject flashRange;
 
-    public float flashDistance = 5f;
+    public float flashDistance = 10f;
 
     void Start()
     {

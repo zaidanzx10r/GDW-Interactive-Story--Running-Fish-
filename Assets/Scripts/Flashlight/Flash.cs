@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Flash : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Monster"))
+        if (other.gameObject.CompareTag("Monster"))
         {
-            Destroy(collision.gameObject);
+            FollowPlayer stopFollowing = other.GetComponent<FollowPlayer>();
+            
+            if (stopFollowing != null)
+            {
+                stopFollowing.StopMovement();
+                Debug.Log("Deer is stunned!");
+            }
         }
     }
 }
