@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FLController : MonoBehaviour
 {
@@ -16,6 +18,12 @@ public class FLController : MonoBehaviour
     public GameObject flashRange;
     public float flashDistance = 5f;
 
+
+    //public TextMeshProUGUI BatteryLifeCounter;
+    public Transform BatterBar;
+    private Vector3 OGScale;
+
+
     void Start()
     {
         flashlight.enabled = isOn;
@@ -24,9 +32,16 @@ public class FLController : MonoBehaviour
         {
             playerPosition = player.transform;
         }
+
+        OGScale = BatterBar.localScale;
+        
     }
     void Update()
     {
+       // BatteryLifeCounter.text = batteryLife.ToString();
+       float scaleConversion = ((batteryLife / 100f) * 2f);
+        BatterBar.localScale = new Vector3(scaleConversion, OGScale.y, OGScale.z);
+
         if(Input.GetKeyDown(KeyCode.F) && batteryLife > 0)
         {
             isOn = !isOn;
