@@ -18,7 +18,7 @@ public class WinCon : MonoBehaviour
 
     public void ReloadScene()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Leaderboard");
     }
 
     public IEnumerator WinDelay(Collider other)
