@@ -8,9 +8,10 @@ public class GlobalTimer : MonoBehaviour
 {
     public float currentTime = 420f;
     public float removeTime = 1f;
+    public static float finalTime;
 
-    public TextMeshProUGUI scoreValue;
-    public TextMeshProUGUI finalScoreValue;
+    public TextMeshProUGUI timeValue;
+    public TextMeshProUGUI finalTimeValue;
 
     [SerializeField]
     private DeathCon deathController;
@@ -26,16 +27,17 @@ public class GlobalTimer : MonoBehaviour
         if (currentTime > 0)
         {
             currentTime -= removeTime * Time.deltaTime;
+            finalTime = currentTime;
 
-            int minutes = Mathf.FloorToInt(currentTime / 60);
-            int seconds = Mathf.FloorToInt(currentTime % 60);
+            float minutes = Mathf.FloorToInt(currentTime / 60);
+            float seconds = Mathf.FloorToInt(currentTime % 60);
 
             string formattedTime = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-            scoreValue.text = formattedTime;
-            finalScoreValue.text = formattedTime;
+            timeValue.text = formattedTime;
+            finalTimeValue.text = formattedTime;
         }
-        else if (!isDead)
+        else
         {
             isDead = true;
             ActivateDeathScreen();
@@ -46,6 +48,4 @@ public class GlobalTimer : MonoBehaviour
     {
         StartCoroutine(deathController.DeathDelay(null));
     }
-
-
 }
