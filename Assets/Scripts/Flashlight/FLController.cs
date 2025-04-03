@@ -13,7 +13,7 @@ public class FLController : MonoBehaviour
     public float batteryDrain = 5f;
 
 
-    private bool isOn = false;
+    private bool isOn = true;
 
 
     private Transform playerPosition;
