@@ -64,7 +64,7 @@ public class FLController : MonoBehaviour
                 isOn = false;
             }
         }
-
+        
         if(playerPosition != null)
         {
             Vector3 playerPos = playerPosition.position;

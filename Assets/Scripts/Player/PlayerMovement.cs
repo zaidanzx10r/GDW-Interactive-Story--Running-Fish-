@@ -14,10 +14,23 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 WASDInput;  
     private bool isSprinting = false;
 
+    public float maxStam = 100f;
+    public float stamDrain = 15f;
+    public float stamRegen = 10f;
+    public float currentStam;
+
+    public Transform StaminaBar;
+    private Vector3 OGScale;
+
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        currentStam = maxStam;
     }
+    public void Start()
+    {
+        OGScale = StaminaBar.localScale;
+    }   
 
     public void OnMove(InputAction.CallbackContext context)
     {
@@ -30,7 +43,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+            Stamina();
             Movement();
+
+            float scaleConversion = ((currentStam / 100) * 1.5f);
+            StaminaBar.localScale = new Vector3(scaleConversion, OGScale.y, OGScale.z);
     }
 
     private void Movement()
@@ -43,9 +60,29 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 direction = (forward * WASDInput.y) + (right * WASDInput.x);
 
-        float currentSpeed = isSprinting ? movementSpeed * movementSpeedMultiplier : movementSpeed;
+        bool canSprint = isSprinting && currentStam > 0;
+        float currentSpeed = canSprint ? movementSpeed * movementSpeedMultiplier : movementSpeed;
     
         controller.Move((direction * currentSpeed + Vector3.up * Gravity) * Time.deltaTime);
+    }
+    private void Stamina()
+    {
+        if (isSprinting && WASDInput.magnitude > 0f)
+        {
+            currentStam -= stamDrain * Time.deltaTime;
+            if (currentStam < 0f)
+            {
+                currentStam = 0f;
+            }
+        }
+        else 
+        {
+            currentStam += stamRegen * Time.deltaTime;
+            if (currentStam > maxStam)
+            {
+                currentStam = maxStam;
+            }
+        }
     }
     public float IsWalking()
     {
