@@ -64,6 +64,10 @@ public class FLController : MonoBehaviour
                 isOn = false;
             }
         }
+        else
+        {
+            batteryLife += 0.5f * Time.deltaTime;
+        }
         
         if(playerPosition != null)
         {

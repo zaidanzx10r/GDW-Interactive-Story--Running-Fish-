@@ -2546,7 +2546,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
-  movementSpeedMultiplier: 4
+  movementSpeedMultiplier: 2.5
   Gravity: -9.81
   maxStam: 100
   stamDrain: 15
