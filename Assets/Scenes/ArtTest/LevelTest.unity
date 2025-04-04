@@ -54939,7 +54939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942508349878152987, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
       propertyPath: m_Height
-      value: 6.805495
+      value: 13.3741865
       objectReference: {fileID: 0}
     - target: {fileID: 2942508349878152987, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
       propertyPath: m_Radius
@@ -54955,7 +54955,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2942508349878152987, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
       propertyPath: m_Center.z
-      value: 4.79989
+      value: 1.5155438
       objectReference: {fileID: 0}
     - target: {fileID: 4010726965184999664, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
       propertyPath: player
