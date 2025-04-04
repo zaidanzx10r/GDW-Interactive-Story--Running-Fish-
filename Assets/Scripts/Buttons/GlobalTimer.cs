@@ -10,7 +10,6 @@ public class GlobalTimer : MonoBehaviour
     public float removeTime = 1f;
     public static float finalTime;
 
-    public TextMeshProUGUI timeValue;
     public TextMeshProUGUI finalTimeValue;
 
     [SerializeField]
@@ -27,14 +26,13 @@ public class GlobalTimer : MonoBehaviour
         if (currentTime > 0)
         {
             currentTime -= removeTime * Time.deltaTime;
-            finalTime = currentTime;
+            finalTime += removeTime * Time.deltaTime;
 
-            float minutes = Mathf.FloorToInt(currentTime / 60);
-            float seconds = Mathf.FloorToInt(currentTime % 60);
+            float minutes = Mathf.FloorToInt(finalTime / 60);
+            float seconds = Mathf.FloorToInt(finalTime % 60);
 
             string formattedTime = string.Format("{0:00}:{1:00}", minutes, seconds);
 
-            timeValue.text = formattedTime;
             finalTimeValue.text = formattedTime;
         }
         else

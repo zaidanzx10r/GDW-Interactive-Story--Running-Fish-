@@ -10,7 +10,7 @@ public class LeaderboardManager : MonoBehaviour
     public Transform scoreList;
     public TMP_InputField playerNameInput;
 
-    private List<PlayerData> leaderboard = new List<PlayerData>();
+    private List<PlayerData> leaderboard = new();
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class LeaderboardManager : MonoBehaviour
         if (!string.IsNullOrEmpty(playerName))
         {
             // Add new player data to the leaderboard
-            PlayerData newPlayer = new PlayerData(playerName, score);
+            PlayerData newPlayer = new(playerName, score);
             leaderboard.Add(newPlayer);
             SortLeaderboard();
             SaveLeaderboard();
@@ -34,8 +34,8 @@ public class LeaderboardManager : MonoBehaviour
 
     private void SortLeaderboard()
     {
-        // Sort the leaderboard in descending order by score
-        leaderboard.Sort((a, b) => b.score.CompareTo(a.score));
+        // Sort the leaderboard in ascending order by score
+        leaderboard.Sort((a, b) => a.time.CompareTo(b.time));
         if (leaderboard.Count > 10)
         {
             leaderboard = leaderboard.GetRange(0, 10);
@@ -48,13 +48,13 @@ public class LeaderboardManager : MonoBehaviour
         {
             if (i < leaderboard.Count)
             {
-                // Update the name and score fields with leaderboard data
+                // Update the name and time
                 nameList.GetChild(i).GetComponent<TMP_Text>().text = leaderboard[i].name;
-                scoreList.GetChild(i).GetComponent<TMP_Text>().text = leaderboard[i].score.ToString("F2");
+                scoreList.GetChild(i).GetComponent<TMP_Text>().text = FormatTime(leaderboard[i].time);
             }
             else
             {
-                // Clear unused entries
+                // Removes unused slots
                 nameList.GetChild(i).GetComponent<TMP_Text>().text = "";
                 scoreList.GetChild(i).GetComponent<TMP_Text>().text = "";
             }
@@ -66,13 +66,13 @@ public class LeaderboardManager : MonoBehaviour
         for (int i = 0; i < leaderboard.Count; i++)
         {
             PlayerPrefs.SetString($"Leaderboard_Name_{i}", leaderboard[i].name);
-            PlayerPrefs.SetFloat($"Leaderboard_Score_{i}", leaderboard[i].score);
+            PlayerPrefs.SetFloat($"Leaderboard_Score_{i}", leaderboard[i].time);
         }
     }
 
     private void LoadLeaderboard()
     {
-        leaderboard.Clear(); // Clear the current leaderboard
+        leaderboard.Clear();
         for (int i = 0; i < 10; i++)
         {
             if (PlayerPrefs.HasKey($"Leaderboard_Name_{i}"))
@@ -96,5 +96,12 @@ public class LeaderboardManager : MonoBehaviour
         leaderboard.Clear();
         DisplayLeaderboard();
         Debug.Log("Leaderboard cleared!");
+    }
+
+    private string FormatTime(float timeInSeconds)
+    {
+        float minutes = Mathf.FloorToInt(timeInSeconds / 60);
+        float seconds = Mathf.FloorToInt(timeInSeconds % 60);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 }

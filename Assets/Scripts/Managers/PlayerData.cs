@@ -5,11 +5,11 @@ using UnityEngine;
 public class PlayerData
 {
     public string name;
-    public float score;
+    public float time;
 
-    public PlayerData(string name, float score)
+    public PlayerData(string name, float time)
     {
         this.name = name;
-        this.score = score;
+        this.time = time;
     }
 }

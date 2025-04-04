@@ -45545,8 +45545,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentTime: 420
   removeTime: 1
-  timeValue: {fileID: 0}
-  finalTimeValue: {fileID: 0}
+  finalTimeValue: {fileID: 2007505994}
   deathController: {fileID: 522342669}
 --- !u!1 &1954455538
 GameObject:
