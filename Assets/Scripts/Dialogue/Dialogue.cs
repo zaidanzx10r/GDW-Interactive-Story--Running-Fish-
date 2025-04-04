@@ -6,8 +6,8 @@ using TMPro;
 public class Dialogue : MonoBehaviour
 {
         public TextMeshProUGUI promptText;
-    public string intro = "Use 'WASD' on the keyboard to move around and 'Shift' to Run. turn on/off the flashlight by pressing 'F' ";
-    public string Dia1 = "Beware for the Deer. Use 'Q' to stun. Watchout for you battery level.";
+    public string intro = "HHhnng, ouch my head. I remember stumbling through a door into this forest. And I can't forget to use 'F' to turn on my flashlight and 'WASD' to move";
+    public string Dia1 = "I should make my way back through the door. Maybe using 'Q' to flash my light will help ward any critters off.";
 
     void Start()
     {

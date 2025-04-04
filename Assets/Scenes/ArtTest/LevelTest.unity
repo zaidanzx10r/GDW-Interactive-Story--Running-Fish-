@@ -11056,7 +11056,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &308124534
 RectTransform:
   m_ObjectHideFlags: 0
@@ -45004,7 +45004,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   flashlight: {fileID: 1620340663}
   batteryLife: 100
-  batteryDrainSpeed: 1
+  batteryDrainSpeed: 0
   batteryDrain: 5
   flashRange: {fileID: 3814741624203657214, guid: 996159e987bebe443bb9c58d026e8a8f, type: 3}
   flashDistance: 5
@@ -46824,7 +46824,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -50, y: 20}
+  m_AnchoredPosition: {x: 20.400024, y: 68.69998}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1952284564
@@ -53855,15 +53855,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085479244}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0.99332684, z: -0, w: -0.11533334}
+  m_LocalPosition: {x: 94.248825, y: 17.49, z: 370.16003}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1031842031}
   - {fileID: 1795239131}
   m_Father: {fileID: 502114238}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -193.246, z: 0}
 --- !u!1 &2086296381 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: e6b4e6b207a414842aad74d9d16f10b4, type: 3}
@@ -54933,6 +54933,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walking Deer
       objectReference: {fileID: 0}
+    - target: {fileID: 808150347427580501, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4010726965184999664, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
       propertyPath: player
       value: 
@@ -54941,6 +54945,10 @@ PrefabInstance:
       propertyPath: deathController
       value: 
       objectReference: {fileID: 522342669}
+    - target: {fileID: 9137471890777316493, guid: 1921dc33fe53eea448cd76f9b401b4b2, type: 3}
+      propertyPath: m_Speed
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
