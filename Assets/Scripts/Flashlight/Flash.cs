@@ -9,11 +9,19 @@ public class Flash : MonoBehaviour
         if (other.gameObject.CompareTag("Monster"))
         {
             FollowPlayer stopFollowing = other.GetComponent<FollowPlayer>();
-            
+
             if (stopFollowing != null)
             {
                 stopFollowing.StopMovement();
                 Debug.Log("Deer is stunned!");
+            }
+
+            AudioSource deerScreech = other.GetComponent<AudioSource>();
+
+            if (deerScreech != null)
+            {
+                deerScreech.Play();
+                Debug.Log("Audio played!");
             }
         }
     }

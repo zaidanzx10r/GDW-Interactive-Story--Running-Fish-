@@ -6,9 +6,11 @@ public class Footsteps : MonoBehaviour
 {
     public AudioSource Audio;
     public PlayerMovement playerMovement;
+
     void Update()
     {
         float isWalking = playerMovement.IsWalking();
+
         if (isWalking >= 1 )
         {
             FootStep();
