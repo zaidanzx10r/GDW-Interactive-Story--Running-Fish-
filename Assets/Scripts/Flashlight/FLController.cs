@@ -12,9 +12,7 @@ public class FLController : MonoBehaviour
     public float batteryDrainSpeed = 0.5f;
     public float batteryDrain = 5f;
 
-
     private bool isOn = true;
-
 
     private Transform playerPosition;
     public GameObject flashRange;
@@ -24,11 +22,13 @@ public class FLController : MonoBehaviour
     public float defaultintensity = 6f;
     public float fadeDuration = 0.5f;
     public float durationTime = 0f;
-            
-    //public TextMeshProUGUI BatteryLifeCounter;
+
+    // Audio for clicking
+    public AudioSource clickAudio;
+
+    // UI-related
     public Transform BatterBar;
     private Vector3 OGScale;
-
 
     void Start()
     {
@@ -40,27 +40,28 @@ public class FLController : MonoBehaviour
         }
 
         OGScale = BatterBar.localScale;
-        
     }
+
     void Update()
     {
-       // BatteryLifeCounter.text = batteryLife.ToString();
-       float scaleConversion = ((batteryLife / 100f) * 1.5f);
+        float scaleConversion = ((batteryLife / 100f) * 1.5f);
         BatterBar.localScale = new Vector3(scaleConversion, OGScale.y, OGScale.z);
 
-        if(Input.GetKeyDown(KeyCode.F) && batteryLife > 0)
+        if (Input.GetKeyDown(KeyCode.F) && batteryLife > 0)
         {
             isOn = !isOn;
             flashlight.enabled = isOn;
+
+            clickAudio.Play();
         }
-        
-        if(isOn)
+
+        if (isOn)
         {
             batteryLife -= batteryDrainSpeed * Time.deltaTime;
-            if(batteryLife <= 0)
+            if (batteryLife <= 0)
             {
                 batteryLife = 0;
-                flashlight.enabled=false;
+                flashlight.enabled = false;
                 isOn = false;
             }
         }
@@ -68,8 +69,8 @@ public class FLController : MonoBehaviour
         {
             batteryLife += 0.5f * Time.deltaTime;
         }
-        
-        if(playerPosition != null)
+
+        if (playerPosition != null)
         {
             Vector3 playerPos = playerPosition.position;
         }
@@ -79,9 +80,8 @@ public class FLController : MonoBehaviour
 
     public void Flash()
     {
-        if(Input.GetKeyDown(KeyCode.Q) && playerPosition != null && batteryLife >= batteryDrain) 
+        if (Input.GetKeyDown(KeyCode.Q) && playerPosition != null && batteryLife >= batteryDrain)
         {
-
             batteryLife -= batteryDrain;
 
             Vector3 spawnPosition = playerPosition.position + playerPosition.forward * flashDistance;
@@ -90,10 +90,9 @@ public class FLController : MonoBehaviour
             Destroy(flashEffect, 0.5f);
 
             StartCoroutine(FlashbangEffect());
-
         }
-
     }
+
     private IEnumerator FlashbangEffect()
     {
         flashlight.intensity = maxIntensity;
@@ -101,12 +100,12 @@ public class FLController : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
 
         flashlight.intensity = defaultintensity;
-
     }
+
     public void RechargeBattery(float amount)
     {
         batteryLife += amount;
-        if(batteryLife > 100f)
+        if (batteryLife > 100f)
         {
             batteryLife = 100f;
         }
