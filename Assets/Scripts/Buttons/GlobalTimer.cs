@@ -16,6 +16,12 @@ public class GlobalTimer : MonoBehaviour
     private DeathCon deathController;
     private bool isDead = false;
 
+    private void Start()
+    {
+        currentTime = 420f;
+        finalTime = 0f;
+    }
+
     private void Update()
     {
         Timer();
